@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Please Sorry Nooby</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #ffe6f0; /* Light pink */
+            height: 100vh;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 80vh;
+            position: relative;
+        }
+        .btn {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        .Its.okay {
+            background-color: #ff4081;
+            color: white;
+        }
+        .Chall {
+            background-color: #ccc;
+            color: black;
+            position: absolute;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            width: 60%;
+            max-width: 600px;
+            z-index: 1000;
+        }
+        .modal-content {
+            text-align: left;
+            font-size: 18px;
+        }
+        .modal .btn-close {
+            background-color: #ff4081;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .give-box {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #00bcd4;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+        }
+        .give-box i {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Nooby I'm Sorry</h1>
+        <button class="btn Its okay" onclick="showModal()">It's okay.</button>
+        <button class="btn Chall" id="noButton">Nahi</button>
+    </div>
+
+    <div class="modal" id="messageModal">
+        <div class="modal-content">
+            <p>Galti ho gayi maaf karo, jhagda jhugdi saaf karo...</p>
+            <p>You know that I have taken a lot of time and you know I can't express my thoughts in words, I have alot of flaws but cause of my fear I am always unable to face them. I know I have done something that has deeply hurt you but I never intended that and I will cant even imagine of doing that again in my life. I know it will be hard for you to forgive me and forget what happened but down the line I want we should grow and understand each other little more than before, I just want to have also taken efforts but never imagined that it will land link this, so for this mistake I have done and I need you to be a bigger person and forgive me for what I did, else my silence will put myself in the dark soo bad that I would not see the light for a very long. Just the thought of you leaving me has vanished my sleeps I can hardly sleep the entire nights since a week hoping things will change. Babe I really miss you and I cant leave without you. Forgive me if you can and lets rebuild this relationship from ground zero and I promise will not repeat my mistake except I need my time to figure things out other than that I can just say sorry, Now, please click below.</p>
+            <div class="give-box" onclick="redirectToSong()">
+                <span>Click here</span>
+                <i>💗😭</i>
+            </div>
+            <button class="btn-close" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <script>
+        const youtubeLink = "https://youtu.be/a9Hxkc9YxGE?si=r06jS6qrvKU_N4By";
+
+        function showModal() {
+            document.getElementById('messageModal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('messageModal').style.display = 'none';
+        }
+
+        function redirectToSong() {
+            window.location.href = youtubeLink;
+        }
+
+        const noButton = document.getElementById("noButton");
+
+        noButton.addEventListener("mouseover", function () {
+            const x = Math.random() * (window.innerWidth - noButton.clientWidth);
+            const y = Math.random() * (window.innerHeight - noButton.clientHeight);
+            noButton.style.left = `${x}px`;
+            noButton.style.top = `${y}px`;
+        });
+    </script>
+</body>
+</html>
